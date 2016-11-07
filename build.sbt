@@ -15,3 +15,7 @@ libraryDependencies ++= Seq(
 )
 
 libraryDependencies <+= scalaVersion("org.scala-lang" % "scala-compiler" % _ )
+
+resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
+
+routesGenerator := InjectedRoutesGenerator
