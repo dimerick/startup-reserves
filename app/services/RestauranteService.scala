@@ -23,8 +23,4 @@ class RestauranteService @Inject()(restaurantes: Restaurantes) {
     else
       restaurantes.guardar(restaurante)
   }
-
-  def modificar(restaurante: Restaurante): Boolean = {
-    restaurantes.modificar(restaurante)
-  }
 }
