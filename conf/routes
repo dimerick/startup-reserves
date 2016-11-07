@@ -6,6 +6,8 @@
 GET     /                           controllers.Application.index
 GET     /db                         controllers.Application.db
 GET     /restaurantes               controllers.RestauranteController.consultarRestaurantes
+GET     /restaurante/:nit           controllers.RestauranteController.consultarRestaurante(nit:String)
+POST    /restaurante                controllers.RestauranteController.guardar
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
