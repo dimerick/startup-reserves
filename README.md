@@ -1,6 +1,6 @@
 # scala/play-getting-started
 
-A barebones Scala app (using the Play framework), which can easily be deployed to Heroku.  
+A barebones Scala app (using the Play framework 2.5), which can easily be deployed to Heroku.  
 
 This application support the [Getting Started with Scala/Play on Heroku](https://devcenter.heroku.com/articles/getting-started-with-scala) article - check it out.
 
