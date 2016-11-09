@@ -11,5 +11,14 @@ POST    /restaurante                controllers.RestauranteController.guardar
 POST    /reserva                    controllers.ReservaController.guardar
 GET     /reservas                   controllers.ReservaController.consultarReservas
 
+GET     /usuario/:email             controllers.UsuarioController.consultaUsuario(email:String)
+POST    /usuario                    controllers.UsuarioController.crearUsuario
+GET     /usuarios                   controllers.UsuarioController.consultaUsuarios
+
+GET     /mesas/:nit                 controllers.MesaController.consultarMesasPorNit(nit:String)
+GET     /mesa/:numero/:nit          controllers.MesaController.consultarMesa(numero: Int, nit: String)
+POST    /mesa                       controllers.MesaController.guardar
+
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
