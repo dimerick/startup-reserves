@@ -20,7 +20,8 @@ class Application @Inject() extends Controller {
     val energy = scala.util.Properties.envOrElse("ENERGY", "12 GeV")
     val m = Amount.valueOf(energy).to(KILOGRAM)
     val testRelativity = s"E=mc^2: $energy = $m"
-    Ok(views.html.index(testRelativity))
+//    Ok(views.html.index(testRelativity))
+    Ok(testRelativity)
   }
 
   def db = Action {

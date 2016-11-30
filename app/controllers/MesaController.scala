@@ -43,7 +43,7 @@ class MesaController @Inject()(mesaService: MesaService) extends Controller {
     val placeResult = request.body.validate[Mesa]
     placeResult.fold(
       errors => {
-        BadRequest(Json.obj("status" -> "KO", "message" -> JsError.toJson(errors)))
+        BadRequest(Json.obj("status" -> "OK", "message" -> JsError.toJson(errors)))
       },
       mesa => {
         mesaService.guardar(mesa)
