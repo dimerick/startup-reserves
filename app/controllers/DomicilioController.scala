@@ -16,7 +16,7 @@ class DomicilioController @Inject()(domicilioService: DomicilioService) extends 
   implicit val domicilioWrites: Writes[Domicilio] = (
     (JsPath \ "id").write[Int] and
       (JsPath \ "usuario_email").write[String] and
-      (JsPath \ "menu_id").write[String] and
+      (JsPath \ "menu_id").write[Int] and
       (JsPath \ "fecha").write[String] and
       (JsPath \ "hora").write[String] and
       (JsPath \ "estado_domicilio_id").write[Int] and
@@ -27,7 +27,7 @@ class DomicilioController @Inject()(domicilioService: DomicilioService) extends 
   implicit val domicilioReads: Reads[Domicilio] = (
     (JsPath \ "id").read[Int] and
       (JsPath \ "usuario_email").read[String] and
-      (JsPath \ "menu_id").read[String] and
+      (JsPath \ "menu_id").read[Int] and
       (JsPath \ "fecha").read[String] and
       (JsPath \ "hora").read[String] and
       (JsPath \ "estado_domicilio_id").read[Int] and
